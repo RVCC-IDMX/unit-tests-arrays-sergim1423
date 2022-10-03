@@ -41,7 +41,7 @@
  * @returns {string} - the character at the index
  */
 function findTheCharacterAtIndex(str, indx) {
-  // write your code here & return value
+  return str[indx];
 }
 
 /**
@@ -52,7 +52,8 @@ function findTheCharacterAtIndex(str, indx) {
  * @returns {string} - the sliced string
  */
 function sliceTheString(str, start, end) {
-  // write your code here & return value
+  slice = str.slice(start, end);
+  return slice;
 }
 
 /**
@@ -62,7 +63,8 @@ function sliceTheString(str, start, end) {
  * @returns {array} - the array of substrings
  */
 function splitTheString(str, separator) {
-  // write your code here & return value
+  str = str.split(separator);
+  return str;
 }
 
 /**
@@ -71,7 +73,7 @@ function splitTheString(str, separator) {
  * @returns {string} - the string with all the letters in uppercase
  */
 function makeAllUpperCase(str) {
-  // write your code here & return value
+  return str.toUpperCase();
 }
 
 /**
@@ -80,7 +82,7 @@ function makeAllUpperCase(str) {
  * @returns {string} - the string with all the letters lowercase
  */
 function makeAllLowerCase(str) {
-  // write your code here & return value
+  return str.toLowerCase();
 }
 
 /**
@@ -92,7 +94,9 @@ function makeAllLowerCase(str) {
  * ? ex: 'HELLO' => 'Hello'
  */
 function makeWordTitleCase(word) {
-  // write your code here & return value
+  titleCase = word.toLowerCase();
+  sliceWord = titleCase.slice(1);
+  return titleCase.charAt(0).toUpperCase() + sliceWord;
 }
 
 /**
@@ -104,7 +108,7 @@ function makeWordTitleCase(word) {
  * ? ex: 'hello world', 'hello', 'hi' => 'hi world'
  */
 function replaceTheString(str, oldStr, newStr) {
-  // write your code here & return value
+  return str.replace(oldStr, newStr);
 }
 
 /**
@@ -116,7 +120,12 @@ function replaceTheString(str, oldStr, newStr) {
  * ? hint: use split() and makeWordTitleCase()
  */
 function makeSentenceTitleCase(sentence) {
-  // write your code here & return value
+  sentence = sentence.toLowerCase();
+  sentence = sentence.split(' ');
+  for (let i = 0; i < sentence.length; i++) {
+    sentence[i] = sentence[i].charAt(0).toUpperCase() + sentence[i].slice(1);
+  }
+  return sentence.join(' ');
 }
 
 module.exports = {
