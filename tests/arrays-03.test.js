@@ -53,7 +53,7 @@ test('makeTheString', () => {
   const sampleArray = ['A', 'big', 'black', 'bear', 'is', 'running'];
   const frozenArray = Object.freeze(sampleArray);
   const expectedString = 'A big black bear is running';
-  expect(makeTheString(frozenArray, ' ')).toBe(expectedString);
+  expect(makeTheString(frozenArray)).toBe(expectedString);
   expect(makeTheString(frozenArray, ' ')).not.toBe(sampleArray);
 });
 

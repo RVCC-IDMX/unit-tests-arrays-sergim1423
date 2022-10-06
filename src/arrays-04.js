@@ -16,7 +16,8 @@
  * ? hint: use Math.abs() to get the absolute value of a number
  */
 function getAbsoluteSum(nums) {
-  // write your code here & return value
+  sum = Math.abs(nums);
+  return sum;
 }
 
 /**
@@ -27,7 +28,7 @@ function getAbsoluteSum(nums) {
  * ? hint: use the filter() array method - https://youtu.be/JY5HUDMudew
  */
 function removeStrings(arr) {
-  // write your code here & return value
+  return arr.filter(string => string.length > 6);
 }
 
 /**
