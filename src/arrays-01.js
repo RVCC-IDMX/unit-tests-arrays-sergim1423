@@ -16,8 +16,7 @@
  * ? in a function and the changes will be permanent
  */
 
-//const { j } = require("vitest/dist/index-6e18a03a");
-
+// const { j } = require("vitest/dist/index-6e18a03a");
 
 /**
  * Returns the first element (indexing from 0) of an array
@@ -39,7 +38,7 @@ function getFirstValue(arr) {
  * @returns {array} - array of the 4 elements
  */
 function makeArray(a, b, c, d) {
-  array = [];
+  const array = [];
   array[0] = a;
   array[1] = b;
   array[2] = c;
@@ -55,7 +54,7 @@ function makeArray(a, b, c, d) {
  *
  */
 function createFirstFivePrimes() {
-  array = [];
+  const array = [];
   array[0] = 2;
   array[1] = 3;
   array[2] = 5;
@@ -72,7 +71,8 @@ function createFirstFivePrimes() {
  * ? must use a for loop
  */
 function createSizedArray(size) {
-  array = [];
+  const array = [];
+  // eslint-disable-next-line no-plusplus
   for (let i = 0; i <= size - 1; i++) {
     array[i] = i;
   }
@@ -87,14 +87,15 @@ function createSizedArray(size) {
  * ? https://bit.ly/39z4FTE - Adding and Deleting Array Elements
  */
 function modifyArrayByAdding(arr) {
-  let arrSize = arr.length;
-  let newArray = [];
+  const arrSize = arr.length;
+  const newArray = [];
   newArray.length = arrSize + 2;
   newArray[0] = 1;
   newArray[newArray.length - 1] = 1;
+  // eslint-disable-next-line no-plusplus
   for (let i = 1, j = 0; i < newArray.length - 1; i++, j++) {
     newArray[i] = arr[j];
-    console.log(newArray[i])
+    console.log(newArray[i]);
   }
   return newArray;
 }
@@ -132,6 +133,7 @@ function findElementAtIndex(arr, index) {
  */
 function findElementByValue(arr, value) {
   let found;
+  // eslint-disable-next-line no-plusplus
   for (let index = 0; index < arr.length; index++) {
     console.log(arr[index]);
     if (arr[index] === value) {
@@ -154,7 +156,6 @@ function changeElementAtIndex(arr, index, value) {
   return arr;
 }
 
-
 /**
  * Creates a string from an array of letters
  * @param {array} arr - array to use
@@ -164,10 +165,9 @@ function changeElementAtIndex(arr, index, value) {
  */
 function makeStringFromArray(arr) {
   let string = '';
-  if (arr.length == 0) {
+  if (arr.length === 0) {
     string = '';
-  }
-  else if (arr.length !== 0) {
+  } else if (arr.length !== 0) {
     string = arr.join('');
   }
   return string;
@@ -181,7 +181,7 @@ function makeStringFromArray(arr) {
  * ? https://bit.ly/39ASLc0 - The spread operator
  */
 function createShallowCopy(arr) {
-  newArray = [...arr];
+  const newArray = [...arr];
   return newArray;
 }
 

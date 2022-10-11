@@ -52,7 +52,7 @@ function findTheCharacterAtIndex(str, indx) {
  * @returns {string} - the sliced string
  */
 function sliceTheString(str, start, end) {
-  slice = str.slice(start, end);
+  const slice = str.slice(start, end);
   return slice;
 }
 
@@ -63,8 +63,8 @@ function sliceTheString(str, start, end) {
  * @returns {array} - the array of substrings
  */
 function splitTheString(str, separator) {
-  str = str.split(separator);
-  return str;
+  const strg = str.split(separator);
+  return strg;
 }
 
 /**
@@ -94,8 +94,8 @@ function makeAllLowerCase(str) {
  * ? ex: 'HELLO' => 'Hello'
  */
 function makeWordTitleCase(word) {
-  titleCase = word.toLowerCase();
-  sliceWord = titleCase.slice(1);
+  const titleCase = word.toLowerCase();
+  const sliceWord = titleCase.slice(1);
   return titleCase.charAt(0).toUpperCase() + sliceWord;
 }
 
@@ -120,9 +120,13 @@ function replaceTheString(str, oldStr, newStr) {
  * ? hint: use split() and makeWordTitleCase()
  */
 function makeSentenceTitleCase(sentence) {
+  // eslint-disable-next-line no-param-reassign
   sentence = sentence.toLowerCase();
+  // eslint-disable-next-line no-param-reassign
   sentence = sentence.split(' ');
+  // eslint-disable-next-line no-plusplus
   for (let i = 0; i < sentence.length; i++) {
+    // eslint-disable-next-line no-param-reassign
     sentence[i] = sentence[i].charAt(0).toUpperCase() + sentence[i].slice(1);
   }
   return sentence.join(' ');

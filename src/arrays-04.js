@@ -17,6 +17,7 @@
  */
 function getAbsoluteSum(nums) {
   let sum = 0;
+  // eslint-disable-next-line no-plusplus
   for (let i = 0; i < nums.length; i++) {
     sum += Math.abs(nums[i]);
   }
@@ -31,14 +32,14 @@ function getAbsoluteSum(nums) {
  * ? hint: use the filter() array method - https://youtu.be/JY5HUDMudew
  */
 function removeStrings(arr) {
-  number = [];
+  const number = [];
+  // eslint-disable-next-line no-plusplus
   for (let i = 0; i < arr.length; i++) {
-    if (typeof arr[i] !== "string") {
+    if (typeof arr[i] !== 'string') {
       number.push(arr[i]);
     }
   }
   return number;
-
 }
 
 /**
@@ -60,13 +61,12 @@ function removeStrings(arr) {
  * ? hint 2: use the spread operator with Math.min() and Math.max()
  */
 function findMinMax(arr) {
-  minMax = [];
-  let min = Math.min(...arr);
-  let max = Math.max(...arr);
+  const minMax = [];
+  const min = Math.min(...arr);
+  const max = Math.max(...arr);
   minMax[0] = min;
   minMax[1] = max;
   return minMax;
-
 }
 
 /**
@@ -90,12 +90,12 @@ function findMinMax(arr) {
  * ? https://bit.ly/39ASLc0
  */
 function getTelNo(numbers) {
-  let shallowCopy = [...numbers];
-  shallowCopy.splice(0, 0, "(");
-  shallowCopy.splice(4, 0, ")");
-  shallowCopy.splice(5, 0, " ");
-  shallowCopy.splice(9, 0, "-");
-  let phoneNumber = shallowCopy.join("");
+  const shallowCopy = [...numbers];
+  shallowCopy.splice(0, 0, '(');
+  shallowCopy.splice(4, 0, ')');
+  shallowCopy.splice(5, 0, ' ');
+  shallowCopy.splice(9, 0, '-');
+  const phoneNumber = shallowCopy.join('');
   return phoneNumber;
 }
 
